@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    div{
+      font-size: 0px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .col-lg-3 {
+      width: 30%;
+    }
+
+    .col-lg-6 {
+      width: 60%;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .full-width {
+      width: 100%;
+      height: auto;
+    }
+
+    .absolute{
+        position: absolute;
+    }
+
+    .relative{
+        position: relative;
+    }
+
+    .banner1-title-container{
+      top: 10px;
+      left: 10px;
+    }
+
+    .color-white{
+      color: white;
+    }
+
+    span,h2,p{
+      font-size: 18px;
+    }
+
+    .shop-now-button{
+      margin: 50px 0px 0px 0px;
+      padding: 15px 40px 15px 40px;
+      background-color: #ffffff;
+      color: #212529;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 30px 30px;
+      text-transform: uppercase;
+      letter-spacing: 0px;
+    }
+
+    .flex-center{
+      justify-content: center;
+    }
+
+    .gap-1{
+      gap: 2px;
+    }
+
+    .flex-row{
+      flex-direction: row;
+    }
+
+    .flex-wrap{
+      flex-wrap: wrap;
+    }
+
+    .yellow{
+      color: yellow;
+    }
+
+    .banner-space{
+      display: block;
+      height: 20px;
+      border: none;
+    }
+  </style>
+  <body class="home-page">
+    <main>
+      <section class="banner-section ">
+        <div class="container flex flex-center gap-1">
+          <div class="banner1 col-lg-6 relative">
+                <img class="full-width"
+                src="https://demo-uminex.myshopify.com/cdn/shop/files/banner_1_1.jpg?v=1672388332&width=3000"
+                alt=""
+                />
+                <div class="banner1-title-container absolute color-white">
+                    <div>
+                        <span>New Arrivals...</span>
+                        <hr class="banner-space">
+                        <h2>Cell Phone...
+                          <span class="yellow">25mp</span>
+                        </h2>
+                        <hr class="banner-space">
+                        <p>Limited Time: Online Only</p>
+                    </div>
+                    <button class="shop-now-button">SHOP NOW</button>
+                </div>
+            </div>
+          <div class="col-lg-3 gap-1 flex flex-row flex-wrap">
+            <img class="full-width"
+            src="https://demo-uminex.myshopify.com/cdn/shop/files/img_1_1.jpg?v=1672808212&width=3000"
+            alt=""
+            />
+            <img class="full-width"
+            src="https://demo-uminex.myshopify.com/cdn/shop/files/img_1_2.jpg?v=1672808231&width=3000"
+            alt=""
+            />
+        </div>
+        <div class="xxx-container">
+          <div class="category-card">
+            <div>
+              <img src="" alt="" />
+            </div>
+            <h2>OLED/Smart TVs</h2>
+            <p>16 products</p>
+          </div>
+        </div>
+      </section>
+      <section class="best-price-section">
+        <div class="container">
+          <div class="title">
+            <p>Hot Deals!<span>Get our best prices</span></p>
+            <p>Hurry up! Offer end in :</p>
+            <p>00</p>
+          </div>
+          <div class="content">
+            <img src="" class="ads" alt="" />
+            <div class="product-card">
+              <img src="" alt="" />
+              <h3>Laptop Apple...</h3>
+              <div class="review"></div>
+              <p class="price">$230.00</p>
+              <div class="progress-bar"></div>
+              <p>Sold: 55/100 products</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feature-products-section"></section>
+    </main>
+  </body>
+</html>

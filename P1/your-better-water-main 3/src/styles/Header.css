@@ -1,0 +1,213 @@
+/* Header 样式 */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 80px;
+  transition: background-color 0.3s ease-in-out; /* 滚动背景变换 */
+}
+
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* 滚动时变为深色背景 */
+}
+
+/* 主容器样式 */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 100%;
+  /* background-color: black; */
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* 将菜单项向右对齐 */
+  gap: 2rem; /* 菜单项之间的间距 */
+  flex-grow: 1; /* 占满可用空间 */
+}
+
+
+/* 导航栏 */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* 导航栏链接 */
+/* 一级菜单链接 */
+.nav-link {
+  color: white; /* 默认文字颜色 */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative; /* 为伪元素定位 */
+  display: inline-block; /* 使宽度与文字内容一致 */
+  padding: 0.5rem 0; /* 仅上下内边距 */
+  transition: color 0.3s ease;
+}
+
+
+
+.nav-link::after {
+  content: ""; /* 创建伪元素 */
+  position: absolute;
+  bottom: 0; /* 将下划线放在文字下方 */
+  left: 0; /* 从文字开始 */
+  width: 100%; /* 下划线宽度与文字宽度一致 */
+  height: 2px; /* 下划线高度 */
+  background-color: white; /* 下划线颜色 */
+  transform: scaleX(0); /* 初始隐藏下划线 */
+  transform-origin: left; /* 下划线从左侧展开 */
+  transition: transform 0.3s ease; /* 平滑展开效果 */
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1); /* 显示完整下划线 */
+}
+
+/* Consumer Information 页面样式 */
+.header.consumer-page {
+  background-color: black; /* 背景 */
+}
+
+.header.consumer-page .nav-link {
+  color: white; /* 一级菜单文字颜色 */
+}
+
+.header.consumer-page .nav-link:hover {
+  color: white; 
+}
+
+
+.header.consumer-page .nav-link::after {
+  background-color: white; 
+}
+
+
+.header.transparent-page {
+  background-color: transparent; /* 全透明背景 */
+}
+/* 其他页面（一级菜单颜色变为 #10271D，全透明背景） */
+.header.transparent-page .nav-link {
+  color: rgb(16, 39, 29); /* 一级菜单文字颜色 */
+}
+
+.header.transparent-page .nav-link:hover {
+  color: rgb(16, 39, 29); /* 不改变颜色 */
+}
+
+.header.transparent-page .nav-link::after {
+  background-color: rgb(16, 39, 29); /* 下划线颜色 */
+}
+
+
+.header.transparent-page .header {
+  background-color: transparent; /* 全透明背景 */
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* 二级菜单初始状态 */
+.sub-menu {
+  position: absolute;
+  top: calc(100% + 30px); /* 在一级菜单的底部并增加 20px 的间距 */
+  left: 50%;
+  transform: translateX(-50%); /* 将菜单本身居中对齐 */
+
+  background-color: #0078d4; /* 蓝色背景 */
+  border-radius: 8px; /* 圆角 */
+  width: 150px; /* 固定宽度 */
+  list-style: none;
+  padding: 0.5rem 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+
+  opacity: 0; /* 初始透明 */
+  visibility: hidden; /* 初始不可见 */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* 添加透明度和可见性动画 */
+}
+
+/* 鼠标悬停显示二级菜单 */
+.nav-item:hover .sub-menu {
+  opacity: 1; /* 完全显示 */
+  visibility: visible; /* 设置为可见 */
+}
+
+/* 二级菜单链接样式 */
+.sub-menu-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 1rem; /* 菜单项的内边距 */
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  border-radius: 4px; /* 菜单项的圆角 */
+}
+
+.sub-menu-link:hover {
+  background-color: #005a9c; /* 深蓝色背景 */
+}
+
+/* 右侧按钮 */
+.header-actions {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.call-to-order {
+  background-color: #0078d4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.call-to-order:hover {
+  background-color: #005a9c;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* 默认隐藏导航栏 */
+  }
+
+  .nav-list.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+  }
+}

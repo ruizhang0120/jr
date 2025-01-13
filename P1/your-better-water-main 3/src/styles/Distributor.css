@@ -1,0 +1,18 @@
+/* Become a Distributor 页面样式 */
+.distributor-page {
+    background-color: rgba(255, 99, 71, 1); /* 设置背景色 */
+    padding: 6rem;
+    min-height: 100vh;
+  }
+  
+  .distributor-page h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .distributor-page p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  

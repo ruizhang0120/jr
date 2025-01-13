@@ -1,0 +1,98 @@
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* 卡片样式 */
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* ID选择器 - 不同卡片的背景色 */
+/* 此处最好不要用id当选择器 */
+.ux-research {
+  background-image: linear-gradient(
+      to bottom right,
+      rgb(95, 123, 216),
+      rgb(100, 169, 221, 0.5)
+    ),
+    url(./images/image\ 1.jpeg);
+}
+.bootcamp {
+  background-image: linear-gradient(
+      to bottom right,
+      rgb(100, 168, 221),
+      rgb(95, 216, 166, 0.5)
+    ),
+    url(./images/image\ 2.jpeg);
+}
+
+/* 卡片内容样式 */
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.learn-more {
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Hover 效果 */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.learn-more:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

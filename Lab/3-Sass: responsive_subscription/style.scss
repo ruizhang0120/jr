@@ -1,0 +1,187 @@
+$gutter: 30px;
+$primary-font: "Poppins", sans-serif;
+$background-color: #fefefe;
+$clr-2: #6f69ac;
+$clr-3: #80ed99;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  background-color: $background-color;
+}
+
+.pricing {
+  padding: 100px 0;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;//不然三个格子会往左放
+  max-width: 1440px;
+  margin: 0 auto;//紫色盒子居中放
+}
+
+// placeholder selector 继承  
+%price-card {
+  margin-right: $gutter;
+  &:last-child {
+    margin-right: 0;
+  }
+  border: 5px solid var(--clr);
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  .fa-check {
+    color: #57cc99;
+  }
+  .fa-times {
+    color: #ff0000;
+  }
+}
+
+.price-card.clr-1 {
+  @extend %price-card;
+  --clr: #ffb319;
+}
+
+.price-card.clr-2 {
+  @extend %price-card;
+  --clr: #{$clr-2};// #{ variable }表示使用某一个变量的值
+}
+
+.price-card.clr-3 {
+  @extend %price-card;
+  --clr: #{$clr-3};
+}
+
+.price-container {
+  width: 140px;
+  height: 140px;
+  background-color: var(--clr);
+  border-radius: 50%;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 10px var(--clr);
+}
+
+.price {
+  display: flex;
+  span:first-child {
+    font-size: 30px;
+  }
+  span:last-child {
+    font-size: 50px;
+  }
+}
+
+.plan {
+  margin: 30px 0;
+  text-transform: capitalize;//开头大写
+  font-size: 30px;
+  color: #333;
+  text-align: center;
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);//再往上走这根线它自身的50%高，才是完全在正中
+  }
+
+  span {
+    background-color: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;//把字往上提，用白色背景盖住黄线
+  }
+}
+
+.deliverables-wrapper {
+  list-style: none;
+}
+
+.deliverable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+
+  &:not(:last-child) {//除了最后一个
+    margin-bottom: 20px;
+  }
+
+  span:first-child {
+    text-transform: capitalize;
+    color: #333;
+    margin-right: 15px;
+  }
+}
+
+.align-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 45px;
+  padding: 10px 20px;
+  border: 3px solid var(--clr);
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--clr);
+  border-radius: 100px;
+  transition: all 0.3s;
+  &:hover {
+    color: #fff;
+    background-color: var(--clr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .cards-wrapper {
+    flex-wrap: wrap;
+  }
+  .price-card {
+    width: calc(50% - $gutter);//一行两张card，宽度为
+    &:nth-child(2) {
+      margin-right: 0;//第二个card去掉右外边距
+    }
+    &:last-child {
+      margin-top: $gutter;//最后一个去掉上外边距
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .price-card {
+    width: 100%;
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $gutter;
+    }
+  }
+}

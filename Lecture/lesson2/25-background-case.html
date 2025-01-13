@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 背景图https://placekitten.com/1200/800 */
+      /* 背景透明，文字居中不透明 */
+      div{
+        width: 500px;
+        height: 200px;
+        position: relative;
+      }
+      div:before{
+        background-image: url(images/bg.jpg); 
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        -webkit-filter: opacity(50%);
+        filter: opacity(50%);
+
+      }
+      h1{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Cute kittehs everywhere!</h1>
+    </div>
+  </body>
+</html>

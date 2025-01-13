@@ -1,0 +1,19 @@
+
+/* Consumer Information 页面样式 */
+.consumer-info-page {
+    background-color: rgba(144, 238, 144, 1); /* 设置背景色 */
+    padding: 6rem;
+    min-height: 100vh;
+  }
+  
+  .consumer-info-page h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .consumer-info-page p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
