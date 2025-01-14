@@ -1,0 +1,43 @@
+.faq {
+  width: 80%;
+  max-width: 800px;
+  background-color: #e0f4f3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+.faq h1 {
+  text-align: left; /* 确保标题左对齐 */
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.faq .accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+.faq .accordion-item .accordion-header {
+  display: flex; /* 使用flex布局 */
+  justify-content: space-between; /* 将内容分布在两端，标题靠左，按钮靠右 */
+  align-items: center; /* 垂直居中对齐 */
+  text-align: left; /* 确保标题左对齐 */
+}
+.faq .accordion-item .accordion-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.faq .accordion-item .accordion-header .icon {
+  font-size: 24px; /* 设置加减号的大小 */
+  cursor: pointer; /* 鼠标悬停时显示手形光标 */
+  margin-left: 10px; /* 左边距，确保有适当的间隔 */
+}
+.faq .accordion-item .accordion-content {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 0 0 5px 5px;
+  animation: slideDown 0.3s ease;
+}
+.faq .accordion-item .accordion-content p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+  text-align: left; /* 确保段落左对齐 */
+} /*# sourceMappingURL=FAQ.css.map */

@@ -1,0 +1,112 @@
+/* 基础导航栏样式 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  position: fixed; /* 固定导航栏在页面顶部 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 占满页面宽度 */
+  z-index: 1000; /* 保证导航栏始终在最上层 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+
+.navbar-logo {
+  margin-right: auto; /* 将 Logo 靠到最左边 */
+}
+
+.navbar-logo img {
+  height: 50px; /* 调整 Logo 大小 */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px; /* 控制链接间的间距 */
+  margin-left: auto; /* 将内容向右对齐 */
+}
+
+.navbar-item {
+  position: relative; /* 添加相对定位 */
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400; /* 字体变得稍细 */
+  font-size: 13px; /* 调整字体大小 */
+  transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+  color: #00aaff;
+}
+
+/* 悬停下拉菜单样式 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* 下拉菜单出现在链接下方 */
+  left: 0;
+  background-color: #007bff;
+  padding: 10px 0;
+  border-radius: 8px;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 13px; /* 下拉菜单字体大小 */
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #0056b3;
+}
+
+/* 显示下拉菜单的悬停效果 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 按钮样式 */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 调整右侧按钮与其他元素的间距 */
+  margin-left: 20px;
+}
+
+.call-to-order {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px; /* 调整按钮的内边距 */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px; /* 按钮字体大小 */
+  transition: background-color 0.3s;
+}
+
+.call-to-order:hover {
+  background-color: #0056b3;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.search-button:hover {
+  color: #00aaff;
+}

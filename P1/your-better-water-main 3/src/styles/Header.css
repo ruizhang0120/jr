@@ -1,12 +1,15 @@
 /* Header 样式 */
 .header {
-  position: fixed;
+  position: absolute; /* 从文档流中脱标 */
+
   top: 0;
   width: 100%;
   z-index: 999;
   height: 80px;
   transition: background-color 0.3s ease-in-out; /* 滚动背景变换 */
 }
+
+
 
 .header.scrolled {
   background-color: rgba(0, 0, 0, 0.9); /* 滚动时变为深色背景 */
@@ -22,9 +25,24 @@
   /* background-color: black; */
 }
 
+.logo {
+  display: flex;
+  width: 200px;
+  height: 100%;
+  align-items: center;
+}
 /* Logo */
-.logo img {
-  height: 50px;
+.logo a{
+  display: block;
+  margin-left: 2rem;
+  
+  width: 200px;
+  height: 2rem;
+  /* line-height: 2rem; */
+  font-size: 0px;
+  background-image: url(/images/enagic-distributor-logo-white-transparent-bg.webp);
+  background-size: contain; /* 保持图片宽高比例 */
+  background-repeat: no-repeat;
 }
 
 .nav {
@@ -82,7 +100,7 @@
 
 /* Consumer Information 页面样式 */
 .header.consumer-page {
-  background-color: black; /* 背景 */
+  background-color: transparents; /* 背景 */
 }
 
 .header.consumer-page .nav-link {

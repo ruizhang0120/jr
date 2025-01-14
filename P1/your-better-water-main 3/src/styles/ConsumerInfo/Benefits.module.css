@@ -1,0 +1,305 @@
+/* 整体页面样式 */
+.consumer-info-page {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2f0;
+    color: #333;
+    margin-top: 5rem;
+  }
+  
+  /* 顶部标题和描述区域 */
+  .webinar-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem; /* 间距 */
+    margin: 0 auto; /* 水平居中 */
+    margin-bottom: 2.5rem;
+    max-width: 1200px; /* 设置一个最大宽度，确保内容不会拉得太宽 */
+    width: 100%; /* 容器宽度占满父级 */
+    padding: 5rem;
+  }
+  
+  .webinar-header {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .webinar-header h2 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .webinar-header h1 {
+    font-size: 3rem;
+    margin: 0.625rem 0; /* 10px -> 0.625rem */
+    font-weight: bold;
+  }
+  
+  .webinar-info {
+    padding-top: 5rem;
+    flex: 1;
+  }
+  
+  .webinar-info p {
+    margin-bottom: 1.25rem; /* 20px -> 1.25rem */
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  
+  .webinar-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .webinar-info ul li {
+    margin-bottom: 0.9375rem; /* 15px -> 0.9375rem */
+    padding-left: 1.5625rem; /* 25px -> 1.5625rem */
+    position: relative;
+    font-size: 1.1em;
+  }
+  
+  .webinar-info ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #0073e6;
+    font-size: 1.2em;
+  }
+  
+  /* Testimonials 和表单部分 */
+  .webinar-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem; /* 间距 */
+    margin: 0 auto; /* 水平居中 */
+    margin-bottom: 2.5rem;
+    max-width: 1200px; /* 设置一个最大宽度，确保内容不会拉得太宽 */
+    width: 100%; /* 容器宽度占满父级 */
+    padding: 5rem;
+
+  }
+  
+  /* Testimonials Slider */
+  .testimonials-section {
+    flex: 1;
+    background-color: transparent;
+    padding: 1.25rem; /* 20px -> 1.25rem */
+    border-radius: 0.625rem; /* 10px -> 0.625rem */
+    text-align: left;
+  }
+  
+  .testimonials-section h3 {
+    font-size: 1.5em;
+  }
+  .testimonials-section h1 {
+    margin-bottom: 3rem; /* 20px -> 1.25rem */
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Testimonials 滑动容器 */
+  .testimonials-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1.25rem; /* 20px -> 1.25rem */
+    background-color: transparent;
+    border-radius: 0.625rem;
+    text-align: center;
+  }
+  
+  blockquote {
+    font-style: italic;
+    margin: 0;
+    color: #333;
+    text-align: left;
+
+  }
+  
+  blockquote cite {
+    display: block;
+    margin-top: 0.625rem; /* 10px -> 0.625rem */
+    font-weight: bold;
+    text-align: center;
+
+  }
+  
+  /* 滑动按钮 */
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .slider-controls button {
+    background-color: #066aa8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .slider-controls button:hover {
+    background-color: #04537e;
+  }
+  
+  /* Webinar Form 样式 */
+  .webinar-form {
+    margin-top: 5rem;
+    flex: 1;
+    background-color: transparent;
+    padding: 1.25rem; /* 20px -> 1.25rem */
+    border-radius: 0.625rem; /* 10px -> 0.625rem */
+
+  }
+  
+  .webinar-form h2 {
+    margin-bottom: 1.25rem; /* 20px -> 1.25rem */
+    font-weight: bold;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .form-group {
+    margin-bottom: 0.9375rem; /* 15px -> 0.9375rem */
+    width: 100%;
+  }
+  
+  /* .form-group label {
+    display: block;
+    margin-bottom: 0.3125rem; 
+    font-weight: bold;
+  }
+   */
+
+   .form-group label {
+    display: inline-flex; /* 水平对齐内容 */
+    align-items: center; /* 确保文字和圆圈垂直居中 */
+    font-size: 1rem; /* 设置字体大小 */
+    font-weight: normal; /* 设置字体为普通粗细 */
+    gap: 0.5rem; /* 圆圈和文字之间的间距 */
+    cursor: pointer; /* 增加手型光标，提升交互体验 */
+  }
+  
+  /* 调整 input 的样式 */
+  .form-group input[type="radio"] {
+    margin: 0; /* 去掉默认的外边距 */
+    width: auto; /* 确保宽度为自适应 */
+    height: auto; /* 确保高度自适应 */
+    flex-shrink: 0; /* 防止缩小 */
+  }
+  .form-group input {
+    width: 100%;
+    padding: 0.625rem; /* 10px -> 0.625rem */
+    border: 0.0625rem solid #ccc; /* 1px -> 0.0625rem */
+    border-radius: 0.3125rem; /* 5px -> 0.3125rem */
+  }
+  
+  button {
+    width: 100%;
+    background-color: #066aa8;
+    color: #fff;
+    padding: 0.9375rem; /* 15px -> 0.9375rem */
+    border: none;
+    border-radius: 0.3125rem; /* 5px -> 0.3125rem */
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #04537e;
+  }
+  
+  /* 父容器样式 */
+  .video-banner {
+    position: relative; /* 让子元素根据容器定位 */
+    width: 100%;
+    height: 100vh; /* 设置容器高度为视口高度 */
+    overflow: hidden; /* 防止溢出 */
+    
+  }
+  
+  /* 背景视频样式 */
+  .background-video {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* object-fit: cover; */
+    /* z-index: 0; /* 确保视频在内容后面 */
+    /* overflow: hidden;
+    direction: ltr;  */
+    position: absolute; /* 绝对定位让视频填充容器 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    object-fit: cover; /* 确保视频按比例填充背景，裁剪溢出部分 */
+    z-index: 0; /* 确保视频在内容下方 */
+    filter: brightness(20%);
+
+  }
+  
+  /* 内容覆盖层样式 */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 5rem;
+    z-index: 10;
+  }
+  
+  /* 标题样式 */
+  .content h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.01rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* 描述文字样式 */
+  .content p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin-bottom: 0.7rem;
+  }
+  
+  /* 按钮样式 */
+  .content .button {
+    display: inline-block;
+    background-color: #066aa8;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .content .button:hover {
+    background-color: #04537e;
+  }
+  

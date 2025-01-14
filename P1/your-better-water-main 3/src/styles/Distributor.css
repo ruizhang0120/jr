@@ -1,18 +1,485 @@
-/* Become a Distributor 页面样式 */
+/* 通用样式 */
 .distributor-page {
-    background-color: rgba(255, 99, 71, 1); /* 设置背景色 */
-    padding: 6rem;
-    min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+
+  background-color: rgba(44, 62, 80, 1);
+}
+
+.wrapper {
+  margin: 0px auto;
+}
+
+
+
+.transition_bg1 {
+  height: 30rem;
+  /* 过渡区域的高度 */
+  background: linear-gradient(to bottom, rgba(44, 62, 80, 1), #1e3c72);
+  /* 渐变过渡 */
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 70rem;
+
+  background:
+    linear-gradient(to right, rgba(44, 62, 80, 1), rgba(44, 62, 80, 0.1)),
+    linear-gradient(to top, rgba(44, 62, 80, 1), rgba(44, 62, 80, 0.85)),
+    url(/images/distributor_hero_bg.webp);
+  background-size: 125%;
+  /* 放大背景图到 125% */
+  background-position: top left;
+  /* 居中显示图片 */
+}
+
+
+
+.hero-content {
+  margin: 10rem auto;
+  width: 100%;
+
+  display: flex;
+}
+
+.hero-section .hero-slogan {
+  margin-top: 10rem;
+  margin-left: 8rem;
+
+  line-height: 9rem;
+  font-size: 6rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-section .hero-detail {
+  margin-top: 4rem;
+  margin-left: 8rem;
+
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Animation */
+.fade-in-line {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* 确保每个 span 动画独立延迟 */
+.hero-slogan .fade-in-line:nth-of-type(1) {
+  animation-delay: 0.3s;
+}
+
+.hero-slogan .fade-in-line:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+
+.hero-slogan .fade-in-line:nth-of-type(3) {
+  animation-delay: 0.9s;
+}
+
+.hero-detail .fade-in-line:nth-of-type(1) {
+  animation-delay: 1.5s;
+}
+
+.hero-detail .fade-in-line:nth-of-type(2) {
+  animation-delay: 1.7s;
+}
+
+.hero-detail .fade-in-line:nth-of-type(3) {
+  animation-delay: 1.9s;
+}
+
+.hero-detail .fade-in-line:nth-of-type(4) {
+  animation-delay: 2.1s;
+}
+
+.hero-section .right {
+  flex: 1;
+  align-self: flex-end;
+}
+
+.hero-section .right a {
+  margin: 0px auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  width: 12rem;
+  height: 3.5rem;
+  line-height: 3.25rem;
+  background-color: #2C3E50;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  /* 添加浅白色边框 */
+  border-radius: 1.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* 添加柔和阴影 */
+  font-weight: 700;
+  color: white;
+  text-align: center;
+
+  transition: all 0.3s ease;
+  /* 鼠标悬停效果 */
+
+  /* 初始状态 */
+  opacity: 0;
+  transform: translateX(50px) scale(1);
+  animation: fadeInLeft 2.5s ease-out 2.5s forwards;
+  /* 动画效果 + 延迟2.5秒 */
+}
+
+
+.hero-section .right a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* 鼠标悬停时背景变亮 */
+  color: #004ca7;
+  /* 字体变成按钮默认背景颜色 */
+}
+
+
+
+
+
+.benefits {
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  padding: 5rem 0;
+}
+
+.benefits .wrapper {
+  max-width: 120rem;
+
+}
+
+.benefits .upside {
+  display: flex;
+}
+
+.benefits h2 {
+  color: #fff;
+  line-height: 6rem;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+
+.benefits .upside .left a {
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 12rem;
+  height: 3.5rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 1.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+}
+
+.benefits .upside .left a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+.benefits .upside p {
+  flex: 1;
+  padding: 8rem 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  opacity: 0;
+  animation: fadeInText 1s ease-out 0.5s forwards;
+}
+
+
+
+
+.benefits .downside {
+  display: flex;
+  max-width: 100rem;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefits .downside .card {
+  width: 15rem;
+  height: 20rem;
+  perspective: 1000px;
+}
+
+.benefits .downside .card h3 {
+  font-weight: 700;
+
+}
+
+.benefits .downside .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.benefits .downside .card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.benefits .downside .card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.benefits .downside .card-front {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.benefits .downside .card-back {
+  background-color: #f9f9f9;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+.technology {
+  padding: 20rem 2rem;
+  background: linear-gradient(to bottom, #2a5298, #1e3c72, #2a5298);
+  /* 创建平滑过渡效果 */
+  position: relative;
+}
+
+.technology-wrapper {
+  margin: 0 auto;
+  max-width: 120rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.technology-images-1 {
+  height: 40rem;
+  width: 60rem;
+  border-radius: 20px;
+  background-image: url('/images/distributor_tech_1.jpg');
+  /* 图片路径 */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* 确保图片覆盖div */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+  /* 添加阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* 悬浮动画 */
+
+  /* 装饰性光晕 */
+  position: relative;
+  z-index: 1;
+}
+
+.technology-images-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  /* 半透明边框 */
+  z-index: -1;
+  filter: blur(10px);
+  /* 模糊效果 */
+  transition: opacity 0.3s ease;
+}
+
+.technology-images-1:hover {
+  transform: scale(1.05);
+  /* 悬浮时放大 */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 8px 12px rgba(0, 0, 0, 0.3);
+  /* 加深阴影 */
+}
+
+.technology-images-1:hover::before {
+  opacity: 1;
+  /* 显示光晕 */
+}
+
+.technology-content {
+  margin-left: 10rem;
+  flex: 1;
+  text-align: left;
+  color: #2c3e50;
+}
+
+.technology-content h2 {
+  color: #fff;
+  line-height: 6rem;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.technology-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  /* 增加段落间距 */
+  line-height: 1.8;
+  color: #f0f0f0;
+  /* 提高对比度 */
+}
+
+.technology-content ul li {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #d4d4d4;
+  display: flex;
+  align-items: center;
+}
+
+.technology-content ul li::before {
+  content: '✔';
+  color: #27ae60;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  animation: bounce 1s infinite;
+  /* 添加轻微的弹跳动画 */
+}
+
+.cta-button {
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 12rem;
+  height: 3.5rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 1.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+
+
+.transition_bg2 {
+  height: 35rem;
+  /* 过渡区域高度 */
+  background: linear-gradient(to bottom, #2a5298, #689ab8);
+  /* 渐变背景从当前色到目标色 */
+}
+
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
   }
-  
-  .distributor-page h1 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .distributor-page p {
-    font-size: 1.2rem;
-    color: #555;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) scale(1.5);
+    /* 初始位置 + 原始大小 */
   }
-  
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1.5);
+    /* 最终位置 + 放大1.5倍 */
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,136 @@
+.wrapper {
+  margin: 0px auto;
+}
+
+.footer {
+  background-color: #689ab8;
+}
+
+.footer .wrapper{
+  /* margin-top: 50em; */
+  height: 100rem;
+  width: 80rem;
+}
+
+
+.footer .slogan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15rem;
+  /* background-color: pink; */
+}
+
+.footer .slogan h2 {
+  width: 43rem;
+
+  font-family: stolzl, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  
+  color: white;
+}
+
+.footer .slogan a {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 16rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  background-color: #004ca7;
+  border-radius: 1.75rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.footer .slogan a span {
+  vertical-align: top;
+}
+
+.footer .logo {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 6rem;
+  height: 12rem;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+
+.footer .logo img {
+  height: 9.5rem;
+  width: 25rem;
+}
+
+.footer .nav {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.footer .nav section h2 {
+  margin: 2.5rem 0;
+  line-height: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.footer .nav section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer .nav section a,
+.footer .nav section address
+{
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.2rem;
+
+}
+
+/* 基础样式 */
+.nav ul li a {
+  text-decoration: none; /* 初始无下划线 */
+  color: white;
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease-in-out; /* 添加平滑的缩进动画 */
+}
+
+/* 悬停时的动画效果 */
+.nav ul li a:hover {
+  transform: translateX(10px); /* 向右缩进 */
+}
+
+/* 使用伪元素实现下划线动画 */
+.nav ul li a::after {
+  content: ""; /* 创建伪元素 */
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem; /* 下划线与文字的距离 */
+  height: 1px; /* 下划线高度 */
+  width: 0%; /* 初始宽度为 0 */
+  background-color: #fff; /* 下划线颜色 */
+  transition: width 0.2s ease-in-out; /* 平滑动画 */
+}
+
+/* 悬停时触发下划线动画 */
+.nav ul li a:hover::after {
+  width: 100%; /* 下划线从左到右展开 */
+}
+
+
+.footer .copyright {
+  padding-top: 3rem;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+

@@ -1,0 +1,15 @@
+.resources {
+  margin-top: 90px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #d6e8e8;
+}
+
+.resourcesBanner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.ResourcesHeader {
+  color: white;
+}

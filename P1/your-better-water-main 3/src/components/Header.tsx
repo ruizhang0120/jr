@@ -7,14 +7,26 @@ const Header: React.FC = () => {
 
   const menuItems = [
     { label: "Enagic Products", link: "/products", subMenu: [{ label: "Product 1", link: "/product1" }, { label: "Product 2", link: "/product2" }] },
-    { label: "Consumer Information", link: "/info", subMenu: [{ label: "Info 1", link: "/info1" }, { label: "Info 2", link: "/info2" }] },
+    { label: "Consumer Information", link: "/info", 
+      subMenu: [
+        { label: "Benefits of Kangen Water", link: "/info/benefits" },
+        { label: "60+ Uses for the K8", link: "/info/uses" },
+        { label: "Book a No-Cost Information Call", link: "/info/call" },
+        { label: "Machine Maintenance Reminders", link: "/info/maintenance" },
+        { label: "Resources", link: "/info/resources" },
+        { label: "Consumer FAQ", link: "/info/faq" },
+      ],
+    },
     { label: "Become a Distributor", link: "/distributor", subMenu: [] },
     { label: "About Us", link: "/about", subMenu: [] },
     { label: "Contact Us", link: "/contact", subMenu: [] },
   ];
 
+  // 定义需要特殊样式的路径
+  const specialPages = ["/info", "/distributor"];
+  
   // 检查是否为 Consumer Information 页面
-  const isConsumerPage = location.pathname === "/info";
+  const isConsumerPage = specialPages.includes(location.pathname);
 
   return (
     <header className={`header ${isConsumerPage ? "consumer-page" : "transparent-page"}`}>
@@ -22,7 +34,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         {/* TODO: 完成 Logo 部分设计,要svg格式*/}
         <Link to="/" className="logo">
-          <img src="/public/vite.svg" alt="Logo" />
+          <img src="/enagic.svg" alt="Logo" />
         </Link>
         {/* Navigation */}
         <nav className="nav">

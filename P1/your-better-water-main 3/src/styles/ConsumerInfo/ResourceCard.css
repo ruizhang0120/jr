@@ -1,0 +1,50 @@
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.card h3 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.card p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.card .hover-link {
+  text-decoration: none; /* 去掉下划线 */
+  color: #333; /* 链接文字颜色 */
+  font-size: 18px; /* 链接字体大小 */
+  display: inline-flex; /* 使用内联弹性盒子布局 */
+  position: relative; /* 让子元素定位有效 */
+  overflow: hidden; /* 隐藏超出部分 */
+  transition: color 0.3s ease; /* 添加颜色平滑过渡 */
+}
+.card .hover-link .arrow {
+  display: inline-block; /* 箭头使用内联块 */
+  font-size: 20px; /* 箭头大小 */
+  margin-right: 10px; /* 与文字间的距离 */
+  position: relative; /* 定位 */
+  transform: translateX(0); /* 初始位置 */
+  transition: transform 0.3s ease; /* 添加箭头平滑过渡 */
+}
+.card .hover-link .text {
+  display: inline-block; /* 显示 Learn More */
+  opacity: 0; /* 初始透明度为 0 */
+  transform: translateX(-20px); /* 初始位置向左偏移 */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* 平滑过渡 */
+}
+.card .hover-link:hover .arrow {
+  transform: translateX(10px); /* 箭头向右移动 */
+}
+.card .hover-link:hover .text {
+  opacity: 1; /* 文字出现 */
+  transform: translateX(0); /* 移动到正常位置 */
+} /*# sourceMappingURL=Card.css.map */
