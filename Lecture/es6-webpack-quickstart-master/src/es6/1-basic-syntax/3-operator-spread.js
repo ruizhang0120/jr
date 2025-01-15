@@ -15,7 +15,7 @@ console.log(1, ...[2, 3, 4], 5);
 //2. 数组复制
 const a1 = [1, 2];
 const a2 = [...a1];
-const [...a2] = a1;
+// const [...a2] = a1;
 
 //3. 数组合并
 const arr1 = ["a", "b"];
@@ -24,6 +24,7 @@ const arr3 = ["d", "e"];
 [...arr1, ...arr2, ...arr3];
 
 //4. 字符串展开
+//字符串本质上是数组
 console.log(..."Hello，大漠");
 
 //5. 所有实现了Iterator接口的对象都可以展开
